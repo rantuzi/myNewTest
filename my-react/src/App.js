@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
-import ReactDom from 'react-dom';
+import { render } from 'react-dom'
 import { Button } from 'antd-mobile';
-import 'antd-mobile/dist/antd-mobile.css'; 
+import 'antd-mobile/dist/antd-mobile.css';
+import { Router, Route, Link, HashRouter } from 'react-router-dom';
+import Bottom from './bottom/bottom'
+import Home from './home/home'
 // import logo from './logo.svg';
 import './App.css';
 const state = {
@@ -16,23 +19,7 @@ export default class App extends Component {
         {
           name: 'af',
           id: 1
-        },
-        {
-          name: 'af12',
-          id: 2
-        },{
-          name: 'af3',
-          id: 3
-        },{
-          name: 'af4',
-          id: 4
-        },{
-          name: 'af5',
-          id: 5
-        },{
-          name: 'af6',
-          id: 6
-        },
+        }
       ]
     }
   }
@@ -43,20 +30,14 @@ export default class App extends Component {
     })
   }
   render() {
-    const { isStatus, userList } = this.state;
     return (
       <div className="page">
-        <Button onClick={this.toChangeStatus}>{isStatus ? '显示': '隐藏'}</Button>
-        <p>{isStatus ? '显示': '隐藏'}</p>
-        <ul>
-          {
-            userList.map((item) => {
-              return (
-                <li key={item.id}>{item.name}</li>
-              )
-            })
-          }
-        </ul>
+      <HashRouter>
+            <div>
+                <Route path="/home" component={Home}/>
+            </div>
+        </HashRouter >
+      <Bottom></Bottom>
       </div>
     )
   }
