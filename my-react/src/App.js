@@ -5,6 +5,9 @@ import 'antd-mobile/dist/antd-mobile.css';
 import { Router, Route, Link, HashRouter } from 'react-router-dom';
 import Bottom from './bottom/bottom'
 import Home from './home/home'
+import Study from './study/study'
+import Share from './share/share'
+import Mine from './mine/mine'
 // import logo from './logo.svg';
 import './App.css';
 const state = {
@@ -14,29 +17,37 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isStatus: false,
-      userList: [
-        {
-          name: 'af',
-          id: 1
-        }
-      ]
+      username: '阿冉',
+      propsChild: ''
     }
   }
-  toChangeStatus = () => {
-    const { isStatus } = this.state;
+  getChildData (data) {
     this.setState({
-      isStatus: !isStatus
+      propsChild: data
+    },() => {
+
     })
   }
+  // toChangeStatus = () => {
+  //   const { isStatus } = this.state;
+  //   this.setState({
+  //     isStatus: !isStatus
+  //   })
+  // }
   render() {
     return (
       <div className="page">
       <HashRouter>
             <div>
                 <Route path="/home" component={Home}/>
+                <Route path="/study" component={Study}/>
+                <Route path="/share" component={Share}/>
+                <Route path="/mine" component={Mine}/>
             </div>
         </HashRouter >
+        <Study username={this.state.username} pfn={this}></Study>
+        <p>{this.state.propsChild}</p>
+        {/* <Button>点击传值</Button> */}
       <Bottom></Bottom>
       </div>
     )

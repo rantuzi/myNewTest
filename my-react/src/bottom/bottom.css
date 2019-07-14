@@ -16,6 +16,8 @@ code {
 }
 .footer {
     display: flex;
+    height: 40px;
+    background: #fff;
 }
 
 .footer-contain {

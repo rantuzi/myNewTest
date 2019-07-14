@@ -1,4 +1,27 @@
 .space-carousel {
     background: #DEF1E5;
     overflow: hidden;
-  }
+}
+.icon-ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 28px;
+}
+.icon-li {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+}
+.icon-img {
+  width: 47px;
+  height: 47px;
+}
+.icon-title {
+  margin-top: 8px;
+}
+.home {
+  background: #ffffff;
+}

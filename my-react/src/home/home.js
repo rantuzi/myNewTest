@@ -45,7 +45,8 @@ export default class Home extends Component {
                 //请求成功
                     const { iconData } = this.state;
                     this.setState({
-                        iconData: response.data.data.module_icons
+                        iconData: response.data.data.module_icons,
+                        inputText: response.data.data.search_text
                     });
                     console.log('222',response.data.data.module_icons)
             })
@@ -60,7 +61,7 @@ export default class Home extends Component {
         return (
             <div className='home'>
                 <WingBlank><div className="sub-title"></div></WingBlank>
-                    <SearchBar placeholder="Search" maxLength={8} />
+                    <SearchBar placeholder={this.state.inputText} maxLength={8} />
                 <WhiteSpace />
                 <WingBlank>
                     <Carousel
@@ -91,11 +92,11 @@ export default class Home extends Component {
                     </Carousel>
                 </WingBlank>
                 <WingBlank>
-                    <ul>
+                    <ul className='icon-ul'>
                         {this.state.iconData.map(val => (
-                            <li key={val.icon_id}>
-                                 <img key={val.iconId} src={val.icon_url}/>
-                                <span  key={val.iconId}>{val.title}</span>
+                            <li key={val.icon_id} className='icon-li'>
+                                 <img key={val.iconId} src={val.icon_url} className='icon-img'/>
+                                <span  key={val.iconId} className='icon-title'>{val.title}</span>
                             </li>
                         ))}
                         
