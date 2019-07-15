@@ -45,8 +45,8 @@ export default class App extends Component {
                 <Route path="/mine" component={Mine}/>
             </div>
         </HashRouter >
-        <Study username={this.state.username} pfn={this}></Study>
-        <p>{this.state.propsChild}</p>
+        {/* <Study username={this.state.username} pfn={this}></Study> */}
+        {/* <p>{this.state.propsChild}</p> */}
         {/* <Button>点击传值</Button> */}
       <Bottom></Bottom>
       </div>
