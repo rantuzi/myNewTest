@@ -55,6 +55,18 @@ export default class Home extends Component {
                 console.log(error);
             });
     }
+    clickFn = () => {
+        var fs = window.RequestFileSystem || window.webkitRequestFileSystem;
+        if (!fs) {
+            console.log("check failed?");
+        } else {
+            fs(window.TEMPORARY,100,function(){
+                alert('非隐身模式');
+            },function(){
+                alert('隐身模式');
+            });
+        }
+    }
     render() {
         // const {banners} = this.state;
         // console.log('000',banners)
@@ -101,6 +113,9 @@ export default class Home extends Component {
                         ))}
                         
                     </ul>
+                </WingBlank>
+                <WingBlank>
+                    
                 </WingBlank>
             </div>
         )
