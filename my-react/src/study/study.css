@@ -1,0 +1,43 @@
+.study {
+    background: #fff;
+}
+.study-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.study-header .title{
+    font-size: 30px;
+    color: #1D262C;
+    margin-left: 17px;
+}
+.study-header .choose {
+    display: flex;
+    align-items: center;
+    margin-right: 17px;
+}
+.study-header .choose .block {
+    width: 20px;
+    height: 20px;
+    background: red;
+    display: block;
+}
+.study-header .choose .change {
+    font-size: 15px;
+    color: #5CDBD1;
+    margin-left: 25px;
+}
+.contain {
+
+}
+.contain-button {
+    width: 267px;
+    height: 38px;
+    background: #5CDBD1;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 38px;
+    margin: 0 auto;
+}

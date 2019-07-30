@@ -2,15 +2,23 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+    <TestNpmVue :data="msg"></TestNpmVue>
+    <TestNpmVue :data="msg"></TestNpmVue>
+    <TestNpmVue :data="msg"></TestNpmVue>
+    <TestNpmVue :data="msg"></TestNpmVue>
   </div>
 </template>
 
 <script>
+import TestNpmVue from 'test-npm-vue';
 export default {
   name: 'HelloWorld',
+  components: {
+    TestNpmVue
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '你说什么'
     }
   }
 }
