@@ -1,11 +1,11 @@
 <template>
     <div class="hello">
-      	<Mag :data='propsdata'></Mag>
+		  <!-- <Table></Table> -->
     </div>
 </template>
 
 <script>
-import Mag from './Mag.vue'
+import Table from './table/src/table.vue'
 export default {
   	name: 'HelloWorld',
   	data () {
@@ -14,7 +14,7 @@ export default {
     	}
   	},
 	components: {
-		Mag
+		Table
 	}
 }
 </script>
