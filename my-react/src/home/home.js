@@ -2,9 +2,11 @@
 import React, {Component} from 'react';
 import { render } from 'react-dom'
 import { SearchBar, Button, WhiteSpace, WingBlank, Carousel } from 'antd-mobile';
+import { Router, Route, Link, HashRouter } from 'react-router-dom';
 import 'antd-mobile/dist/antd-mobile.css';
 import axios from 'axios';
 import './home.css';
+import Mine from '../mine/mine'
 
 export default class Home extends Component {
     constructor(props) {
@@ -115,8 +117,13 @@ export default class Home extends Component {
                     </ul>
                 </WingBlank>
                 <WingBlank>
-                    
+                    <Link to={`${this.props.match.path}/child`}>7777777</Link>
                 </WingBlank>
+                <HashRouter>
+                    <div>
+                        <Route  path={`${this.props.match.path}/child`} component={Mine}/>
+                    </div>
+                </HashRouter >
             </div>
         )
     }

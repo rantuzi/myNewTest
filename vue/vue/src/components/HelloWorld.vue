@@ -3,19 +3,32 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <TestNpmVue :data="msg"></TestNpmVue>
+    <Table></Table>
+    <button @click='toClickFn'>点击</button>
   </div>
 </template>
 
 <script>
 import TestNpmVue from 'test-npm-vue';
+import Table from '../newComponents/table.vue';
 export default {
   name: 'HelloWorld',
   components: {
-    TestNpmVue
+    TestNpmVue,
+    Table
   },
   data () {
     return {
-      msg: '你说什么'
+      msg: '你说什么',
+      count: 0,
+      num: 0
+    }
+  },
+  methods: {
+    toClickFn() {
+      this.count ++;
+      this.num = this.count;
+      window.localStorage.setItem('count', this.count)
     }
   }
 }
