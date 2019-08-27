@@ -1,7 +1,7 @@
 'use strict'
-require('./check-versions')()
-
-process.env.NODE_ENV = 'production'
+require('./check-versions')() // 立即执行---
+// process是node中的global全局对象的属性，process是node中的全局变量，env设置环境变量
+process.env.NODE_ENV = 'production' 
 
 const ora = require('ora')
 const rm = require('rimraf')

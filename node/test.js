@@ -1,5 +1,5 @@
 var http = require('http');
-
+console.log(process)
 // 创建服务器 creatServer()
 http.createServer(function(request, response) {
     // 发送 HTTP 头部 
