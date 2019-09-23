@@ -1,0 +1,35 @@
+.auto-height {
+	width: 300px;
+	
+}
+li {
+    /* margin-top: 5px; */
+    cursor: pointer;
+    
+}
+/* li:first-child {
+    margin-top: 0;
+} */
+li:hover p {
+    /* border-bottom-width: 1px; */
+    max-height: 600px;
+}
+h3 {
+    padding: 0 20px;
+    height: 40px;
+    background-color: red;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+}
+p {
+    overflow: hidden;
+    padding: 0 20px;
+    /* border: 1px solid red; */
+    border-top: none;
+    /* border-bottom-width: 0; */
+    max-height: 0;
+    line-height: 30px;
+    transition: all 500ms;
+}

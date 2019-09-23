@@ -46,6 +46,7 @@ Vue.use(ElementUI)
   import vOne from './testOne.vue';
   import vTwo from './testTwo.vue';
   import vThree from './testThree.vue';
+  import axios from 'axios'
   export default {
     name: 'HelloWorld',
     components: {
@@ -110,6 +111,9 @@ Vue.use(ElementUI)
       // }
     },
     mounted() {
+      axios.get('https://raw.githubusercontent.com/apache/incubator-echarts/master/map/json/china.json').then(res =>{
+        console.log(res);
+      })
       // await this.consoleOne();
       // await this.consoleTwo();
       // await console.log(this.consoleOne());

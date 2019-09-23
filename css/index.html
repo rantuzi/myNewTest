@@ -1,28 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./scroll.css">
+    <!-- <link rel="stylesheet" href="./scroll.css"> -->
+    <!-- <link rel="stylesheet" href="./radio.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="./shoufengqin.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="transformScroll.css"> -->
+    <link rel="stylesheet" href="./resize.css">
+    <!-- <link rel="stylesheet" href="./gray.css"> -->
 </head>
+
 <body>
     <!-- <div class="wave"></div> -->
-    <div id="div" style="overflow: scroll">
+    <!-- <div id="div" style="overflow: scroll">
         <div class="top"></div>
         <div class="img"></div>
         <div class="top"></div>
         <div class="top"></div>
         <div class="top"></div>
+    </div> -->
+    <!-- <div class="border">0.5px</div> -->
+    <!-- <canvas id="canvas"></canvas> -->
+    <!-- <div class="bruce flex-ct-x">
+        <ul class="beauty-selection">
+            <li>
+                <input type="radio" name="radioName" id="fed-engineer" hidden>
+                <label for="fed-engineer"></label>
+                <span>前端工程师</span>
+            </li>
+            <li>
+                <input type="radio" name="radioName" id="bed-engineer" hidden>
+                <label for="bed-engineer"></label>
+                <span>后端工程师</span>
+            </li>
+            <li>
+                <input type="radio" name="radioName" id="fsd-engineer" hidden>
+                <label for="fsd-engineer"></label>
+                <span>全栈工程师</span>
+            </li>
+        </ul>
+    </div> -->
+    <!-- <div class="bruce flex-ct-x">
+        <ul class="auto-height">
+            <li>
+                <h3>列表1</h3>
+                <p>内容1<br>内容2<br>内容3<br>内容4</p>
+            </li>
+            <li>
+                <h3>列表2</h3>
+                <p>内容1<br>内容2<br>内容3<br>内容4</p>
+            </li>
+            <li>
+                <h3>列表3</h3>
+                <p>内容1<br>内容2<br>内容3<br>内容4</p>
+            </li>
+        </ul>
+    </div> -->
+    <!-- <div class="bruce">
+        <ul class="parallax-scrolling">
+            <li>translateZ(-1px)</li>
+            <li>translateZ(-2px)</li>
+            <li>translateZ(-3px)</li>
+        </ul>
+        <p>内容</p>
+        <ul class="parallax-scrolling">
+            <li>translateZ(-1px)</li>
+            <li>translateZ(-2px)</li>
+            <li>translateZ(-3px)</li>
+        </ul>
+    </div> -->
+    <div class="bruce flex-ct-x">
+        <div class="stretching-column">
+            <div class="left">
+                <div class="resize-bar"></div>
+                <div class="resize-line"></div>
+                <div class="resize-text">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>                                            
+            </div>
+            <div class="right">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        </div>
     </div>
+    <img src="./dog.jpg" alt="">
 </body>
 <script>
-    var div = document.querySelector('.img')
-    document.onscroll = function(e) {
-        div.style.backgroundPositionY = -document.documentElement.scrollTop+'px';
-        // console.log()
-        // console.log('00',e)
-    }
+    // var div = document.querySelector('.img')
+    // document.onscroll = function (e) {
+    //     div.style.backgroundPositionY = -document.documentElement.scrollTop + 'px';
+    // }
+    // const canvas = document.getElementById('canvas');
+    // const ctx = canvas.getContext('2d');
+
+    // ctx.fillStyle = 'green';
+    // ctx.strokeRect(10,10,150,100)
 </script>
+
 </html>
