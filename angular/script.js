@@ -16,6 +16,8 @@ angular.module('drag',[])
       // 请求失败
     })
   })
+
+  
 //   .config(['$routeProvider', function($routeProvider){
 //     $routeProvider
 //     .when('/',{template:'这是首页页面'})
